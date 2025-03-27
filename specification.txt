@@ -1,0 +1,63 @@
+HTML Tags Used:
+
+<nav>: Used for the navigation bar.
+
+<ul>, <li>: Structures the navigation bar menu.
+
+<a>: Creates hyperlinks for navigation in web or in my assets
+
+<button>: Used in the navbar toggle and form submission.
+
+<section>: Divides content into structured sections.
+
+<div>: Used for layout, styling, and structuring content.
+
+<h1>, <h2>, <h5>: Headings for titles and section headers.
+
+<p>: Defines text paragraphs.
+
+<img>: Displays images
+
+<span>: Wraps elements a single line styling
+
+<form>, <input>, <textarea>: Creates a contact form.
+
+<script>: Adds JavaScript for interactivity abnd dynamism
+
+
+CSS Properties Used:
+
+position: Controls the placement of elements (absolute, relative, fixed).
+
+color: Sets text color.
+
+background: Applies background colors and images.
+
+opacity: Controls the transparency of elements.
+
+transition: Animates changes smoothly (used in navbar and hover effects).
+
+transform: Moves or scales elements (used for animations).
+
+width, height, max-width: Controls sizing of elements.
+
+padding, margin: Manages spacing.
+
+border: Defines outlines and button borders.
+
+box-shadow: Adds depth to elements like cards and buttons.
+
+display: Controls how elements are laid out (e.g., flex, block, inline-block).
+
+z-index: Manages the stacking order of elements (used for navbar and backgrounds).
+
+filter: Used for grayscale image effects.
+
+hover: Applies interactive styles when elements are hovered with the mouse
+
+
+JavaScript Usage:
+JavaScript was used to add interactive elements, such as animating the hero section’s background based on mouse movement and making the navbar sticky when scrolling. Additionally, JavaScript was utilized to create dynamic image effects, including a grayscale-to-color transition when hovering over profile pictures and project images, as well as a fade-in effect for images appearing on scroll. This asdds smooth animations and visually appealing interactions throughout the website.
+
+Bootstrap Usage:
+Bootstrap was used for  responsive design, and pre-built styles. It was specifically utilized for the navbar, buttons, grid system, spacing utilities, and badges in my Projects webpage, ensuring a professional which made a great design with custom and minimalistic css

@@ -1,0 +1,333 @@
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body class="bg-light">
+        <!-- Main Navbar (Disappears on Scroll) -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm main-navbar">
+                <div class="container">
+                    <a class="navbar-brand fw-bold text-pink" href="#">Dani Montes de Oca</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link nav-link-hover" href="#about">About Me</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-hover" href="#trajectory">Trajectory</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-hover" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-hover" href="#contact">Contact</a></li>
+                        </ul>
+                        <a href="assets/mi-cv.pdf" download class="btn btn-outline-pink ms-3">Download CV</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Sticky Navbar (Appears on Scroll) -->
+            <nav class="navbar navbar-expand-lg sticky-navbar">
+                <div class="container">
+                    <a class="navbar-brand fw-bold text-white" href="#">Dani Montes de Oca</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#stickyNavbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="stickyNavbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#about">About Me</a></li>
+                            <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#trajectory">Trajectory</a></li>
+                            <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#contact">Contact</a></li>
+                        </ul>
+                        <a href="assets/mi-cv.pdf" download class="btn btn-outline-white ms-3">Download CV</a>
+                    </div>
+                </div>
+            </nav>
+
+            <script>
+                // Sticky navbar logic
+                document.addEventListener("DOMContentLoaded", function () {
+                    const mainNavbar = document.querySelector(".main-navbar");
+                    const stickyNavbar = document.querySelector(".sticky-navbar");
+
+                    window.addEventListener("scroll", function () {
+                        if (window.scrollY > 100) { // When scrolling down 100px, show the sticky navbar
+                            mainNavbar.style.opacity = "0";
+                            stickyNavbar.style.top = "0";
+                        } else {
+                            mainNavbar.style.opacity = "1";
+                            stickyNavbar.style.top = "-70px";
+                        }
+                    });
+                });
+            </script>
+
+
+        <!-- Hero Section -->
+            <section class="hero bg-light text-center d-flex align-items-center min-vh-100 position-relative overflow-hidden">
+                <div class="parallax-bg"></div>
+                <div class="container position-relative">
+                    <h1 class="display-4 fw-bold text-dark">
+                        <span class="text-pink">Daniel Montes de Oca Fernández</span>
+                    </h1>
+                    <p class="lead text-muted">Computer Engineer</p>
+                    <div class="mt-4">
+                        <!-- Botones de Redes Sociales -->
+                        <a href="https://linkedin.com/in/tu-perfil" class="btn btn-outline-dark btn-lg mx-2" target="_blank">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/tu-usuario" class="btn btn-outline-dark btn-lg mx-2" target="_blank">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="mailto:tuemail@gmail.com" class="btn btn-outline-dark btn-lg mx-2">
+                            <i class="bi bi-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        <script>
+            // Script for animated background effect
+            document.addEventListener("mousemove", function (e) {
+                const bg = document.querySelector(".parallax-bg");
+                const x = (e.clientX / window.innerWidth) * 20 - 10; // Movimiento horizontal (-10px a 10px)
+                const y = (e.clientY / window.innerHeight) * 20 - 10; // Movimiento vertical (-10px a 10px)
+
+                bg.style.transform = translate(${x}px, ${y}px);
+            });
+        </script>
+
+        <!-- About Me Section -->
+            <section id="about" class="container py-5">
+                <div class="row align-items-center">
+                    <!-- Foto con efecto Hover -->
+                    <div class="col-md-5 text-center">
+                        <div class="photo-container">
+                            <img src="assets/me.jpg" class="img-fluid profile-photo" alt="Dani's photo">
+                        </div>
+                    </div>
+
+                    <!-- Descripción -->
+                    <div class="col-md-7">
+                        <h2 class="fw-bold text-pink">About Me</h2>
+                        <p class="text-muted">
+                            Hi! I'm <span class="fw-bold">Dani</span>, a Computer Engineering graduate who enjoys creating things that will contribute to society
+                            My interest in technology and programming began during my college years, when I tried my best to be resilient in learning how to code
+                            I have to thank Harvard's CS50 for reinforcing that idea with its challenges, and refueling my learning flame.
+                        </p>
+                        <p class="text-muted">
+                            Currently, I specialize in Software Development, with experience in building both desktop applications and simple and complex web applications.
+                            I had the opportunity of working in a professional environment at the central bank of Mexico, where I have developed good communication skills,
+                            while also applying my academic knowledge in Networks and Data Bases.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+       <!-- Trajectory Section -->
+            <section id="trajectory" class="container py-5">
+                <h2 class="fw-bold text-pink text-center">Trajectory</h2>
+                <p class="text-muted text-center">
+                    My academic journey has shaped my growing passion for software development.
+                    From my foundation in Computer Engineering to international experiences and prestigious programs like CS50 and Oracle Next Education,
+                    I have deepened my knowledge in programming, data structures, and software architecture.
+                    These experiences have strengthened my skills and motivation to build impactful technology solutions.
+                </p>
+
+                <div class="timeline">
+                    <!-- Bachelor's Degree -->
+                    <div class="timeline-item">
+                        <div class="row align-items-center">
+                            <!-- Imagen a la izquierda -->
+                            <div class="col-md-6 text-center fade-in">
+                                <a href="https://www.ipn.mx/" target="_blank">
+                                    <img src="assets/ipn.jpeg" class="img-fluid trajectory-img" alt="IPN Logo">
+                                </a>
+                            </div>
+                            <!-- Texto a la derecha -->
+                            <div class="col-md-6">
+                                <h4 class="fw-bold text-dark">Bachelor's Degree in Computer Engineering</h4>
+                                <p class="text-muted">Instituto Politécnico Nacional (Mexico)</p>
+                                <p class="text-muted">September 2020 - January 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Exchange -->
+                    <div class="timeline-item">
+                        <div class="row align-items-center">
+                            <!-- Texto a la izquierda -->
+                            <div class="col-md-6">
+                                <h4 class="fw-bold text-dark">Academic Exchange Program</h4>
+                                <p class="text-muted">Universidad Técnica Federico Santa María</p>
+                                <p class="text-muted">July 2023 - December 2023</p>
+                            </div>
+                            <!-- Imagen a la derecha -->
+                            <div class="col-md-6 text-center fade-in">
+                                <a href="https://www.usm.cl/" target="_blank">
+                                    <img src="assets/usm.jpg" class="img-fluid trajectory-img" alt="USM Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Harvard CS50 -->
+                    <div class="timeline-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-center fade-in">
+                                <a href="https://cs50.harvard.edu/" target="_blank">
+                                    <img src="assets/cs50.png" class="img-fluid trajectory-img" alt="CS50 Logo">
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="fw-bold text-dark">Harvard CS50</h4>
+                                <p class="text-muted">January 2025 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oracle Next Education -->
+                    <div class="timeline-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h4 class="fw-bold text-dark">Oracle Next Education</h4>
+                                <p class="text-muted">January 2025 - Present</p>
+                            </div>
+                            <div class="col-md-6 text-center fade-in">
+                                <a href="https://www.oracle.com/lad/education/oracle-next-education/" target="_blank">
+                                    <img src="assets/one.png" class="img-fluid trajectory-img" alt="ONE Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Harvard CS50P & CS50 SQL -->
+                    <div class="timeline-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-center fade-in">
+                                <a href="https://cs50.harvard.edu/python/" target="_blank">
+                                    <img src="assets/cs50p.png" class="img-fluid trajectory-img" alt="CS50P Logo">
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="fw-bold text-dark">Harvard CS50P (Python) & CS50 (SQL)</h4>
+                                <p class="text-muted">February 2025 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                // script for images appearing and fading
+                document.addEventListener("DOMContentLoaded", function () {
+                    const images = document.querySelectorAll(".fade-in");
+
+                    function fadeInOnScroll() {
+                        images.forEach((img) => {
+                            const rect = img.getBoundingClientRect();
+                            if (rect.top < window.innerHeight * 0.9) {
+                                img.style.opacity = "1";
+                                img.style.transform = "translateY(0)";
+                            }
+                        });
+                    }
+
+                    window.addEventListener("scroll", fadeInOnScroll);
+                    fadeInOnScroll();
+                });
+            </script>
+
+
+        <!-- Projects Section -->
+            <section id="projects" class="container py-5">
+                <h2 class="fw-bold text-pink text-center">Projects</h2>
+                <div class="row g-4">
+
+                    <!-- Proyecto 1 -->
+                    <div class="col-md-6">
+                        <div class="card project-card border-0 shadow-lg">
+                            <!-- Estatus del Proyecto -->
+                            <span class="project-status bg-warning text-dark">In Progress</span>
+
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-6">
+                                    <img src="assets/wip.gif" class="img-fluid rounded-start" alt="Project 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark">CS50 Final Project</h5>
+                                        <p class="card-subtitle text-muted">This will be the spot for my CS50 Final project</p>
+                                        <p class="project-description text-primary">
+                                            Coming soon!
+                                        </p>
+                                        <!-- Tecnologías Utilizadas -->
+                                        <div class="tech-stack">
+                                            <span class="badge bg-secondary">JavaScript</span>
+                                            <span class="badge bg-secondary">Flask</span>
+                                            <span class="badge bg-secondary">Python</span>
+                                            <span class="badge bg-secondary">SQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="col-md-6">
+                        <div class="card project-card border-0 shadow-lg">
+
+                            <span class="project-status bg-warning text-dark">In Progress</span>
+
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-6">
+                                    <img src="assets/wip.gif" class="img-fluid rounded-start" alt="Project 2">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark">ONE Final Project</h5>
+                                        <p class="card-subtitle text-muted">This shall become my Alura ONE Final Project</p>
+                                        <p class="project-description text-danger">
+                                            I don't know what it's gonna be, but it's gonna be cool, trust!
+                                        </p>
+                                        <div class="tech-stack">
+                                            <span class="badge bg-secondary">Java</span>
+                                            <span class="badge bg-secondary">Spring</span>
+                                            <span class="badge bg-secondary">Node.js</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+        <!-- Contact Section -->
+            <section id="contact" class="container py-5">
+                <h2 class="fw-bold text-pink text-center">Contact</h2>
+                <form action="https://formspree.io/f/mjkyekke" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea name="message" class="form-control" rows="3" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-pink">Send Message</button>
+                </form>
+            </section>
+
+
+    </body>
+</html>

@@ -1,0 +1,224 @@
+/* Cute pink color */
+.text-pink {
+    color: #D63384 !important;
+}
+
+.hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #D63384 0%, #ff80b5 50%, #9089fc 100%);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    background: url("assets/background.gif") center/cover no-repeat;
+    opacity: 0.2;
+    transition: transform 0.4s ease-out;
+    /* Smooth movement */
+}
+
+.text-highlight {
+    color: #FFD1DC;
+    /* Light pink */
+}
+
+.sticky-navbar {
+    position: fixed;
+    top: -70px;
+    /* Hidden initially */
+    width: 100%;
+    background-color: #D63384;
+    /* Pink color */
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav-link-hover {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link-hover::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #D63384;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.nav-link-hover:hover::after {
+    width: 100%;
+}
+
+/* button for cv */
+.btn-outline-pink {
+    color: #D63384;
+    border: 2px solid #D63384;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-pink:hover {
+    background-color: #D63384;
+    color: white;
+}
+
+/* button for navbar */
+.btn-outline-white {
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-white:hover {
+    background-color: white;
+    color: #D63384;
+}
+
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #D63384;
+}
+
+.btn-pink {
+    background-color: #D63384;
+    color: white;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: #ff80b5;
+}
+
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #D63384;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #FF69B4;
+}
+
+
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 3px solid #D63384;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    background: #D63384;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+.project-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Project status badge (!) */
+.project-status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Project description (contrast text color) */
+.project-description {
+    font-weight: bold;
+}
+
+.tech-stack .badge {
+    margin-right: 5px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+
+.photo-container {
+    display: inline-block;
+    border: 5px solid #D63384;
+    /* Initial border color */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* When grayscale initially */
+.profile-photo {
+    width: 100%;
+    max-width: 300px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.photo-container:hover {
+    border-color: #FF69B4;
+    /* New border color on hover */
+}
+
+.photo-container:hover .profile-photo {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    /* Light zoom on hover */
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Hover effect for images */
+.trajectory-img {
+    width: 100%;
+    max-width: 300px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.trajectory-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
